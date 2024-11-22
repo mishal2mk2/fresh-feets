@@ -88,3 +88,74 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("questionnairePopup");
+    const steps = document.querySelectorAll(".step");
+    const progress = document.getElementById("progress");
+    const nextButtons = document.querySelectorAll(".next");
+    const prevButtons = document.querySelectorAll(".prev");
+    const submitButton = document.getElementById("submit");
+    
+    let currentStep = 0;
+  
+    // Show popup after 30 seconds if not already answered
+    if (!localStorage.getItem("multiStepAnswered")) {
+      setTimeout(() => {
+        popup.classList.add("show");
+      }, 1000);
+    }
+  
+    // Function to update the step view
+    function updateStep(stepIndex) {
+      steps.forEach((step, index) => {
+        step.classList.toggle("active", index === stepIndex);
+      });
+      progress.style.width = ((stepIndex + 1) / steps.length) * 100 + "%";
+    }
+  
+    // Handle next buttons
+    nextButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        if (index < steps.length - 1) {
+          currentStep++;
+          updateStep(currentStep);
+        }
+      });
+    });
+  
+    // Handle previous buttons
+    prevButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        if (index >= 0) {
+          currentStep--;
+          updateStep(currentStep);
+        }
+      });
+    });
+  
+    // Handle final submission
+    submitButton.addEventListener("click", () => {
+      alert("Thank you for completing the questionnaire!");
+      popup.classList.remove("show");
+      localStorage.setItem("multiStepAnswered", "true");
+    });
+  
+    // Initialize the first step
+    updateStep(currentStep);
+  });
+
+  const navbar = document.getElementById('header');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 0 && window.scrollY > lastScrollY) {
+          // Scrolling down
+          navbar.classList.add('visible');
+      } else if (window.scrollY === 0) {
+          // At the top of the page
+          navbar.classList.remove('visible');
+      }
+      lastScrollY = window.scrollY;
+  });
