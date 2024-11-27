@@ -4,8 +4,8 @@
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
-  --hue: 45;
-  --sat: 98%;
+  --hue: 210; 
+  --sat: 60%;
   --first-color: hsl(var(--hue), var(--sat), 60%);
   --first-color-light: hsl(var(--hue), var(--sat), 85%);
   --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
@@ -117,7 +117,7 @@ body.dark-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 4.5rem 0 1rem;
+  padding: 2rem 0 1rem;
 }
 
 .section__title, .section__title-center {
@@ -250,7 +250,7 @@ body.dark-theme {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: #1A1A1A;
+  color: #fff;
   padding: .75rem 1.5rem;
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
@@ -569,7 +569,7 @@ body.dark-theme {
     grid-template-columns: repeat(3, 1fr);
   }
   .contact__container {
-    grid-template-columns: 3fr 1.5fr 1.25fr;
+    grid-template-columns: 3fr 2fr 1.25fr;
   }
   .footer__container {
     grid-template-columns: repeat(5, 1fr);
@@ -759,4 +759,163 @@ video {
   color: var(--first-color);              /* Bullet color */
   font-size: 20px;             /* Bullet size */
   margin-right: 10px;          /* Space between bullet and text */
+}
+
+/* Process Stepper */
+/* Ensure the .stepper container has a vertical layout */
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: var(--mb-2);
+}
+
+/* Style for each step */
+.step_process {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Style for the step number (circle) */
+.step__circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  color: var(--body-color);
+  background-color: var(--first-color);
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevent the circle from resizing */
+}
+
+/* Ensure step titles and descriptions are aligned vertically */
+.step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.step__description {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  line-height: 1.5;
+}
+
+/* Add a connector line for all steps except the last one */
+.step_process:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 60px; /* Adjust based on step__circle height */
+  left: 25px; /* Align with the center of the circle */
+  width: 4px;
+  height: calc(100% - 60px); /* Adjust to match spacing */
+  background-color: var(--first-color-light);
+  z-index: -1; /* Place behind the step elements */
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--scroll-bar-color); /* Light color for subtlety */
+  width: 60%; /* Adjust width as needed */
+  margin: var(--mb-2) auto; /* Centered with top and bottom spacing */
+  opacity: 0.8; /* Slight transparency for a softer look */
+}
+/* Service Section */
+.service {
+  margin-bottom: var(--mb-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-1);
+}
+
+.service__image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.service__desc {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  line-height: 1.5;
+  margin-bottom: var(--mb-1);
+}
+
+.service__pricing {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Default styles for pricing card */
+.pricing-card {
+  flex: 1;
+  padding: var(--mb-1);
+  border: 1px solid var(--scroll-bar-color);
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--container-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for desktop */
+.pricing-card:hover {
+  border-color: var(--first-color-alt);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Selected state for mobile (and active card) */
+.pricing-card.selected {
+  border-color: var(--first-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlight recommended pricing */
+.pricing-card--recommended {
+  border: 2px solid var(--first-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .service__pricing {
+    flex-direction: column;
+    gap: var(--mb-1);
+  }
+}
+.hashtag {
+  font-size: var(--h5-font-size);
+  color: var(--first-color);
+}
+.primary-color{
+  color: var(--first-color);
+}
+.text-center{
+  text-align: center;
+}
+input.invalid, select.invalid {
+  border: 2px solid red;
+}
+
+input.invalid:focus, select.invalid:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 5px red;
 }

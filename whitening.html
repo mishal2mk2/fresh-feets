@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Fresh Feets</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container" id="nav">
+            <a href="/" class="nav__logo">Fresh-Feets</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#about" class="nav__link">About us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#contact" class="nav__link">Contact us</a>
+                    </li>
+
+                    <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+
+            <a href="/" class="button button__header">Order Now!</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== Individual Service ===============-->
+        <section class="service-details section container">
+            <!-- Whitening Service -->
+            <div class="service" data-service-name="Whitening">
+                <img src="assets/img/vintage-paper-table-shoe-polishing-tools-jobs-career-concept.jpg"
+                    alt="Whitening Service" class="service__image" />
+
+                <h2 class="section__title">Whitening</h2>
+                <p class="service__desc">
+                    Restore the bright white look of your sneakers. Not suitable for
+                    fabric-only materials.
+                </p>
+                <div class="service__pricing">
+                    <div class="pricing-card pricing-card--normal" onclick="selectCard(this)">
+                        <h4 class="pricing-card__type">Normal</h4>
+                        <p class="pricing-card__price">₹150</p>
+                        <p class="pricing-card__desc">Surface polish for casual wear.</p>
+                    </div>
+                    <div class="pricing-card pricing-card--recommended" onclick="selectCard(this)">
+                        <h4 class="pricing-card__type">Recommended</h4>
+                        <p class="pricing-card__price">₹300</p>
+                        <p class="pricing-card__desc">Detailed polishing for special occasions.</p>
+                    </div>
+                    <div class="pricing-card pricing-card--premium" onclick="selectCard(this)">
+                        <h4 class="pricing-card__type">Premium</h4>
+                        <p class="pricing-card__price">₹500</p>
+                        <p class="pricing-card__desc">Professional-grade polish with extra shine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!--=============== Stepper ===============-->
+        <section class="service-process section container">
+            <h2 class="section__title">How It Works</h2>
+            <div class="stepper">
+                <div class="step_process">
+                    <div class="step__circle">1</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Book Your Service</h3>
+                        <p class="step__description">
+                            Schedule a pickup online or through website.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">2</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Items Recieved</h3>
+                        <p class="step__description">
+                            Your articles are safely received by our team through convenient
+                            methods such as doorstep pickup, courier, or in-store drop-off.
+                            Rest assured, they are in good hands from the moment they reach
+                            us.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">3</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Inspection</h3>
+                        <p class="step__description">
+                            Our meticulous team thoroughly inspects your articles, carefully
+                            assessing any damages or necessary work. Based on our findings,
+                            we recommend suitable services with transparent pricing,
+                            ensuring you are well-informed throughout the process.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">4</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Estimate Approval</h3>
+                        <p class="step__description">
+                            Once you confirm the desired services, we provide a final
+                            estimate for your approval. Only after estimate and service
+                            approval are received, your articles are sent to our workshop,
+                            ready to undergo their transformation.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">5</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Work in Progress</h3>
+                        <p class="step__description">
+                            Your articles embark on their restoration journey at our
+                            dedicated workshop. Our skilled technicians employ their
+                            expertise to deliver the specific services required, ensuring
+                            attention to detail and impeccable craftsmanship.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">6</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Quality Check</h3>
+                        <p class="step__description">
+                            Our dedicated quality assurance team examines each article,
+                            ensuring that the services have been impeccably completed. We
+                            strive for excellence at every stage, upholding our commitment
+                            to delivering exceptional results.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">7</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Photo Approval</h3>
+                        <p class="step__description">
+                            We value your satisfaction. Before finalizing the process, we
+                            share pictures of the completed work with you. You have the
+                            opportunity to review and provide feedback. If any concerns
+                            arise, we're here to address them promptly, ensuring your
+                            complete satisfaction.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">8</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Packing</h3>
+                        <p class="step__description">
+                            With utmost care, our specialized packing team ensures that each
+                            item is packed using high-grade materials. Additionally, we
+                            provide FreshFeets dustbags to safeguard your items, ensuring
+                            they are protected during transit.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">9</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Payment</h3>
+                        <p class="step__description">
+                            To streamline the process, we share an invoice with you for
+                            convenient payment. We accept various payment methods, including
+                            cash, credit cards, debit cards, and online payment gateways.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_process">
+                    <div class="step__circle">10</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Delivery</h3>
+                        <p class="step__description">
+                            Finally, your transformed articles are ready for collection or
+                            delivery as per your preference. We accommodate your needs,
+                            ensuring a seamless and satisfying experience from start to
+                            finish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!--=============== SERVICES ===============-->
+        <section class="services section container" id="services">
+            <h2 class="section__title">
+                Other Services We <br />
+                Offer
+            </h2>
+            <div class="services__container grid">
+                <div class="services__data">
+                    <h3 class="services__subtitle">Cleaning</h3>
+                    <img class="services__img"
+                        src="assets/img/men-rsquo-s-leather-shoes-flat-lay-with-polishing-tools.jpg"
+                        alt="Cleaning Shoes" />
+                    <p class="services__description">
+                        Revive your shoes with eco-friendly cleaning. Perfect for leather,
+                        suede, and fabric shoes. Not recommended for heavily damaged
+                        items.
+                    </p>
+                    <div>
+                        <a href="/cleaning" class="button button-link">More Details</a>
+                    </div>
+                </div>
+
+                <div class="services__data">
+                    <h3 class="services__subtitle">Polishing</h3>
+                    <img class="services__img"
+                        src="assets/img/men-rsquo-s-leather-shoes-flat-lay-with-polishing-tools.jpg" alt="" />
+                    <p class="services__description">
+                        Bring back the original shine of your shoes. Ideal for leather and
+                        synthetic materials.
+                    </p>
+                    <div>
+                        <a href="/polishing" class="button button-link">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!--=============== CONTACT US ===============-->
+        <section class="contact section container" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__content">
+                    <h2 class="section__title-center">
+                        Contact Us From <br />
+                        Here
+                    </h2>
+                    <p class="contact__description">
+                        You can contact us from here, call us or
+                        visit our service center, we will gladly assist you.
+                    </p>
+                </div>
+
+                <ul class="contact__content grid text-center">
+                    <li class="contact__address">
+                        Telephone:
+                        <span class="contact__information">+91-9876543210</span>
+                    </li>
+                    <li class="contact__address">
+                        Email:
+                        <span class="contact__information">freshfeets@gmail.com</span>
+                    </li>
+                    <li class="contact__address">
+                        Location: <span class="contact__information">IG Nagar - Bangalore</span>
+                    </li>
+                </ul>
+
+                <div class="contact__content">
+                    <a href="tel:+919876543210" class="button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                <ul class="footer__links">
+                    <li><a href="/" class="footer__link">Pricing </a></li>
+                    <li><a href="/" class="footer__link">Discounts</a></li>
+                    <li><a href="/" class="footer__link">Report a bug</a></li>
+                    <li><a href="/" class="footer__link">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                <ul class="footer__links">
+                    <li><a href="/" class="footer__link">Blog</a></li>
+                    <li><a href="/" class="footer__link">Our mision</a></li>
+                    <li><a href="/" class="footer__link">Get in touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Community</h3>
+                <ul class="footer__links">
+                    <li><a href="/" class="footer__link">Support</a></li>
+                    <li><a href="/" class="footer__link">Questions</a></li>
+                    <li><a href="/" class="footer__link">Customer help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="/" class="footer__social-link"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="/" class="footer__social-link"><i class="bx bxl-twitter"></i></a>
+                <a href="/" class="footer__social-link"><i class="bx bxl-instagram-alt"></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; Quirall. All right reserved</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="/" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
