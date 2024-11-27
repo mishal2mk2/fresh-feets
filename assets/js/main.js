@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!localStorage.getItem("multiStepAnswered")) {
     setTimeout(() => {
       popup.classList.add("show");
-    }, 1000);
+    }, 10000);
   }
 
   // Function to update the step view
