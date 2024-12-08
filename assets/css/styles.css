@@ -8,7 +8,7 @@
   --logo-top-size: 50px;
   --translate-x-end: calc(50vw - 7rem);
   --translate-y-end: calc(-50% + 1rem);
-  --logo-scale: 1;
+  --logo-scale: 2.2;
   /*========== Colors ==========*/
   --hue: 210; 
   --sat: 60%;
@@ -55,7 +55,7 @@
     --smaller-font-size: .813rem;
     --translate-x-end: calc(50vw - 10rem); /* Move less on smaller screens */
     --translate-y-end: calc(-50% + 5rem);
-    --logo-scale: 0.8; /* Smaller scale for mobile */
+    --logo-scale: 1; /* Smaller scale for mobile */
   }
 }
 
@@ -276,6 +276,10 @@ body.dark-theme {
 
 .button__header {
   display: none;
+}
+
+.button-cta{
+  display: inline;
 }
 
 .button-link {
@@ -570,7 +574,10 @@ body.dark-theme {
 /* For large devices */
 @media screen and (min-width: 968px) {
   .button__header {
-    display: block;
+    display: inline;
+  }
+  .button-cta{
+    display: none;
   }
   .svg__img {
     width: 470px;
@@ -1080,10 +1087,10 @@ input.invalid:focus, select.invalid:focus {
 /* Logo Animation */
 .logo-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 90%;
+  left: 90%;
   transform: translate(-50%, -50%);
-  animation: moveLogo 3s ease-in-out forwards;
+  animation: moveLogo 2s ease-in-out forwards;
   z-index: 10;
 }
 .logo {
@@ -1123,7 +1130,7 @@ input.invalid:focus, select.invalid:focus {
   100% {
       top: var(--header-height);
       /* transform: translate(calc(50vw - 10rem), calc(-50% + 5rem)) scale(1); */
-      transform: translate(var(--translate-x-end), var(--translate-y-end)) scale(var(--logo-scale));
+      transform: translate(-50%, var(--translate-y-end)) scale(var(--logo-scale));
       opacity: 1;
   }
 }
