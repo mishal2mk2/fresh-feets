@@ -107,10 +107,12 @@ themeButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("questionnairePopup");
   const steps = document.querySelectorAll(".step");
+  const closePopupButton = document.getElementById("closePopup");
   const progress = document.getElementById("progress");
   const nextButtons = document.querySelectorAll(".next");
   const prevButtons = document.querySelectorAll(".prev");
   const submitButton = document.getElementById("submit");
+  const triggerButton = document.querySelectorAll(".triggerButton");
 
   let currentStep = 0;
 
@@ -118,8 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!localStorage.getItem("multiStepAnswered")) {
     setTimeout(() => {
       popup.classList.add("show");
-    }, 10000);
+    }, 30000);
   }
+
+  // Show popup when trigger button is clicked
+  triggerButton.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      popup.classList.add("show");
+    });
+  });
+
 
   // Function to update the step view
   function updateStep(stepIndex) {
@@ -153,19 +163,19 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       console.log(index);
       console.log(steps.length);
-      if(index === 2){
+      if (index === 2) {
         const nameInput = document.getElementById("name");
         const name = nameInput.value || "friend"; // Use 'friend' if no name is provided
         const thankYouMessage = `
           Thank you, <span class="primary-color">${name}</span>! We’ve received your details and service preferences.
           We’ll get back to you soon!
       `;
-    
+
         // Modify the content of the final step dynamically
         const step4 = document.getElementById("thanks_note");
         step4.innerHTML = `<h2>${thankYouMessage}</h2>`;
       }
-      
+
       if (index < steps.length - 1) {
         if (validateInputs(currentStep)) {
           currentStep++;
@@ -187,7 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle final submission
   submitButton.addEventListener("click", () => {
-    
+    popup.classList.remove("show");
+    localStorage.setItem("multiStepAnswered", "true");
+  });
+
+  // Close the popup when the close button is clicked
+  closePopupButton.addEventListener("click", () => {
     popup.classList.remove("show");
     localStorage.setItem("multiStepAnswered", "true");
   });
@@ -237,3 +252,36 @@ function selectCard(card) {
   // Redirect to WhatsApp
   window.location.href = whatsappLink;
 }
+const video = document.querySelector(".video-element");
+const overlay = document.querySelector(".video-overlay");
+const playButton = document.querySelector(".play-button");
+const pauseButton = document.querySelector(".pause-button");
+const muteButton = document.querySelector(".mute-button");
+
+// Play Video
+playButton.addEventListener("click", () => {
+  overlay.style.display = "none"; // Hide the overlay
+  video.style.display = "block"; // Show the video
+  video.play();
+});
+
+// Pause Video
+pauseButton.addEventListener("click", () => {
+  if (!video.paused) {
+    video.pause();
+    pauseButton.setAttribute("aria-label", "Play Video");
+  } else {
+    video.play();
+    pauseButton.setAttribute("aria-label", "Pause Video");
+  }
+});
+
+// Mute/Unmute Video
+muteButton.addEventListener("click", () => {
+  video.muted = !video.muted;
+  if (video.muted) {
+    muteButton.setAttribute("aria-label", "Unmute Video");
+  } else {
+    muteButton.setAttribute("aria-label", "Mute Video");
+  }
+});

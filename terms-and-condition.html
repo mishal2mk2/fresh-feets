@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fresh Feets offers premium shoe laundry services including cleaning, polishing, repairs, and whitening. Restore your shoes to their former glory with us!" />
+    <meta name="keywords" content="shoe laundry, shoe cleaning, shoe repair, sneaker cleaning, Fresh Feets" />
+    <meta name="author" content="Fresh Feets" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fresh Feets - Premium Shoe Laundry Services" />
+    <meta property="og:description" content="Fresh Feets offers professional cleaning, polishing, and repair services for your shoes. Book now!" />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.fresh-feets.com" />
+    <meta property="og:type" content="website" />
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Video preload -->
+    <link rel="preload" as="video" href="https://fresh-feets.s3.us-east-1.amazonaws.com/IMG_2449-2+(1)+(1).mp4" type="video/mp4">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Title -->
+    <title>Fresh Feets - Premium Shoe Laundry Services</title>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fresh Feets",
+        "image": "https://www.fresh-feets.com/assets/images/shoe-clean-transformation(1).jpg",
+        "telephone": "+918147101017",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Shoe Street",
+            "addressLocality": "Koramangala",
+            "addressRegion": "Bangalore",
+            "postalCode": "560034",
+            "addressCountry": "IN"
+        },
+        "url": "https://www.fresh-feets.com",
+        "description": "Premium shoe laundry services in Bangalore offering cleaning, polishing, repairs, and whitening."
+    }
+    </script>
+</head>
+
+<body>
+    <div class="popup" id="questionnairePopup">
+        <div class="popup-content">
+            <!-- Close button -->
+            <button id="closePopup" class="close-button">&times;</button>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <!-- step 1 -->
+            <div id="step1" class="step active">
+                <h2 class="my-2">
+                    Let’s get started! Just a few quick details, and we’ll take care of the rest.
+                </h2>
+                <button class="next button">Get Started</button>
+            </div>
+            <!-- step 2 -->
+            <div id="step2" class="step">
+                <h2>Tell us a bit about you</h2>
+                <div class="field padding-bottom--24 my-2 text-start">
+                    <div class="my-1 col-m-2">
+                        <label for="name" class="text-strong">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Name" />
+                    </div>
+                    <div class="my-1 col-m-2">
+                        <label for="city" class="text-strong">Where are you located?</label>
+                        <select id="city" name="city" required>
+                            <option value="">Select</option>
+                            <option value="Madiwala">Madiwala</option>
+                            <option value="Koramangala">Koramangala</option>
+                            <option value="IG Nagar">IG Nagar</option>
+                        </select>
+                    </div>
+                    <div class="my-1 col-m-2">
+                        <label for="mobile" class="text-strong">Your Mobile</label>
+                        <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter.." />
+                    </div>
+                    <div class="my-1 col-m-2">
+                        <label for="email" class="text-strong">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="We’ll send updates here" />
+                    </div>
+                </div>
+                <button class="prev button">Previous</button>
+                <button class="next button">Next</button>
+            </div>
+            <!-- step 3 -->
+            <div id="step3" class="step">
+                <h2>What kind of service do you need?</h2>
+                <div class="field padding-bottom--24 my-2 text-start">
+                    <div class="my-1 col-m-2">
+                        <label for="shoe-type" class="text-strong">Type of shoes</label>
+                        <select id="shoe-type" name="shoe-type" required>
+                            <option value="">Select</option>
+                            <option value="casual-sneakers">Casual Sneakers</option>
+                            <option value="formal-shoe">Formal Shoes</option>
+                            <option value="sports-shoe">Sports Shoes</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    <div class="my-1 col-m-2">
+                        <label for="service" class="text-strong">Service type</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="repairs">Repairs</option>
+                            <option value="whitening">Whitening</option>
+                            <option value="polishing">Polishing</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="prev button">Previous</button>
+                <button class="next button">Next</button>
+            </div>
+            <!-- step 4 -->
+            <div id="step4" class="step">
+                <div id="thanks_note" class="my-2">
+                    <h2>
+                        Thank you! We’ve received your details.
+                    </h2>
+                    <h2>
+                        We'll get in touch with you soon on WhatsApp with the next steps!
+                    </h2>
+                </div>
+                <button class="prev button">Previous</button>
+                <button id="submit" class="button">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container" id="nav" aria-label="Primary Navigation">
+            <a href="/" class="nav__logo">Fresh-Feets</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Our Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact us</a>
+                    </li>
+
+                    <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+
+            <a class="button button__header" id="triggerButton">Order Now!</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== Terms and Conditions ===============-->
+        <section id="terms" class="terms-section container section">
+            <div class="card">
+                <h1 class="section-title">Terms and Conditions</h1>
+                <div class="terms-content">
+                    <h2 class="terms-heading">1. Introduction</h2>
+                    <p class="terms-text">
+                        Welcome to Fresh Feet's website. By accessing and using our services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
+                    </p>
+        
+                    <h2 class="terms-heading">2. Services Provided</h2>
+                    <p class="terms-text">Fresh Feet's offers professional shoe cleaning and restoration services. Our services include but are not limited to:</p>
+                    <ul class="terms-list">
+                        <li class="terms-list-item">Shoe cleaning</li>
+                        <li class="terms-list-item">Shoe polishing</li>
+                        <li class="terms-list-item">Shoe repair and restoration (Coming Soon)</li>
+                    </ul>
+        
+                    <h2 class="terms-heading">3. Orders and Payment</h2>
+                    <h3 class="terms-subheading">3.1 Placing Orders</h3>
+                    <p class="terms-text">
+                        Orders can be placed through our website and WhatsApp by selecting the desired service and providing necessary details. Customers must ensure that the information provided is accurate and complete.
+                    </p>
+                    <h3 class="terms-subheading">3.2 Payment</h3>
+                    <p class="terms-text">
+                        Payments can be made through our secure online payment system. All prices are listed in INR and include applicable taxes unless otherwise stated.
+                    </p>
+        
+                    <h2 class="terms-heading">4. Delivery and Collection</h2>
+                    <h3 class="terms-subheading">4.1 Delivery</h3>
+                    <p class="terms-text">
+                        We offer pickup and delivery services for certain areas. Check our website for availability. Delivery times are estimated and may vary depending on location and service demand.
+                    </p>
+                    <h3 class="terms-subheading">4.2 Collection</h3>
+                    <p class="terms-text">
+                        Customers can drop off and collect their shoes from our designated locations during business hours.
+                    </p>
+        
+                    <h2 class="terms-heading">5. Customer Responsibilities</h2>
+                    <p class="terms-text">
+                        Customers are responsible for inspecting their shoes for any pre-existing damage and informing us at the time of drop-off. We are not responsible for any damage or loss caused by incorrect or incomplete information provided by the customer.
+                    </p>
+        
+                    <h2 class="terms-heading">6. Liability and Limitations</h2>
+                    <p class="terms-text">
+                        While we strive to provide the best care for your shoes, we cannot be held liable for any minor damages that occur during the cleaning process. Our liability is limited to the value of the service provided.
+                    </p>
+        
+                    <h2 class="terms-heading">7. Refunds and Returns</h2>
+                    <p class="terms-text">
+                        Refunds will be provided in cases where services are not delivered as agreed due to our fault. No refunds will be issued for dissatisfaction based on subjective opinions or conditions beyond our control.
+                    </p>
+        
+                    <h2 class="terms-heading">8. Privacy Policy</h2>
+                    <p class="terms-text">
+                        We are committed to protecting your privacy. Please refer to our Privacy Policy for details on how we collect, use, and protect your personal information.
+                    </p>
+        
+                    <h2 class="terms-heading">9. Changes to Terms and Conditions</h2>
+                    <p class="terms-text">
+                        Fresh Feet's reserves the right to modify these terms and conditions at any time. Any changes will be posted on our website, and your continued use of our services constitutes acceptance of the new terms.
+                    </p>
+        
+                    <h2 class="terms-heading">10. Contact Information</h2>
+                    <p class="terms-text">
+                        For any questions or concerns regarding these terms and conditions, please contact us at:
+                    </p>
+                    <ul class="terms-list">
+                        <li class="terms-list-item">Email: <a href="mailto:Freshfeetsblr@gmail.com">Freshfeetsblr@gmail.com</a></li>
+                        <li class="terms-list-item">Phone: +91 8147101017</li>
+                        <li class="terms-list-item">Address: Bengaluru, Karnataka</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!--=============== SERVICES ===============-->
+        <section class="services section container" id="services">
+            <h2 class="section__title">
+                Some Services We <br />
+                Offer
+            </h2>
+            <div class="services__container grid">
+                <div class="services__data">
+                    <h3 class="services__subtitle">Cleaning</h3>
+                    <img class="services__img"
+                        src="assets/img/cleaning.jpg"
+                        alt="Cleaning Shoes" />
+                    <p class="services__description">
+                        Revive your shoes with eco-friendly cleaning. Perfect for leather,
+                        suede, and fabric shoes. Not recommended for heavily damaged items.
+                    </p>
+                    <div>
+                        <a href="/cleaning" class="button button-link">More Details</a>
+                    </div>
+                </div>
+
+                <div class="services__data">
+                    <h3 class="services__subtitle">Whitening</h3>
+                    <img class="services__img"
+                        src="assets/img/whitening.jpg"
+                        alt="Whitening Shoes" />
+                    <p class="services__description">
+                        Restore the bright white look of your sneakers. Not suitable for fabric-only materials.
+                    </p>
+                    <div>
+                        <a href="/whitening" class="button button-link">More Details</a>
+                    </div>
+                </div>
+
+                <div class="services__data">
+                    <h3 class="services__subtitle">Polishing</h3>
+                    <img class="services__img"
+                        src="assets/img/men-rsquo-s-leather-shoes-flat-lay-with-polishing-tools.jpg" alt="" />
+                    <p class="services__description">
+                        Bring back the original shine of your shoes. Ideal for leather and synthetic materials.
+                    </p>
+                    <div>
+                        <a href="/polishing" class="button button-link">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                <ul class="footer__links">
+                    <li><a href="/cleaning" class="footer__link">Cleaning </a></li>
+                    <li><a href="/whitening" class="footer__link">Whitening</a></li>
+                    <li><a href="/polishing" class="footer__link">Polishing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                <ul class="footer__links">
+                    <li><a href="/terms-and-condition" class="footer__link">Terms of Service</a></li>
+                    <li><a href="/privacy-and-policy" class="footer__link">Privacy and Policy</a></li>
+                    <li><a class="footer__link triggerButton">Get in touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="https://www.instagram.com/freshfeets_india/" class="footer__social-link"><i class="bx bxl-instagram-alt"></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; Fresh Feets. All right reserved</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="/" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
