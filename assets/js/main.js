@@ -247,7 +247,7 @@ function selectCard(card) {
   const encodedMessage = encodeURIComponent(message);
 
   // Replace 'YOUR_PHONE_NUMBER' with your business's WhatsApp number
-  const whatsappLink = `https://wa.me/919876543210?text=${encodedMessage}`;
+  const whatsappLink = `https://wa.me/918147101017?text=${encodedMessage}`;
 
   // Redirect to WhatsApp
   window.location.href = whatsappLink;
