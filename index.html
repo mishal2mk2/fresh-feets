@@ -49,6 +49,8 @@
         "description": "Premium shoe laundry services in Bangalore offering cleaning, polishing, repairs, and whitening."
     }
     </script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -59,84 +61,86 @@
             <div id="progress-bar">
                 <div id="progress"></div>
             </div>
-            <!-- step 1 -->
-            <div id="step1" class="step active">
-                <h2 class="my-2">
-                    Let’s get started! Just a few quick details, and we’ll take care of the rest.
-                </h2>
-                <button class="next button">Get Started</button>
-            </div>
-            <!-- step 2 -->
-            <div id="step2" class="step">
-                <h2>Tell us a bit about you</h2>
-                <div class="field padding-bottom--24 my-2 text-start">
-                    <div class="my-1 col-m-2">
-                        <label for="name" class="text-strong">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Name" />
-                    </div>
-                    <div class="my-1 col-m-2">
-                        <label for="city" class="text-strong">Where are you located?</label>
-                        <select id="city" name="city" required>
-                            <option value="">Select</option>
-                            <option value="Madiwala">Madiwala</option>
-                            <option value="Koramangala">Koramangala</option>
-                            <option value="IG Nagar">IG Nagar</option>
-                        </select>
-                    </div>
-                    <div class="my-1 col-m-2">
-                        <label for="mobile" class="text-strong">Your Mobile</label>
-                        <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter.." />
-                    </div>
-                    <div class="my-1 col-m-2">
-                        <label for="email" class="text-strong">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="We’ll send updates here" />
-                    </div>
-                </div>
-                <button class="prev button">Previous</button>
-                <button class="next button">Next</button>
-            </div>
-            <!-- step 3 -->
-            <div id="step3" class="step">
-                <h2>What kind of service do you need?</h2>
-                <div class="field padding-bottom--24 my-2 text-start">
-                    <div class="my-1 col-m-2">
-                        <label for="shoe-type" class="text-strong">Type of shoes</label>
-                        <select id="shoe-type" name="shoe-type" required>
-                            <option value="">Select</option>
-                            <option value="casual-sneakers">Casual Sneakers</option>
-                            <option value="formal-shoe">Formal Shoes</option>
-                            <option value="sports-shoe">Sports Shoes</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-                    <div class="my-1 col-m-2">
-                        <label for="service" class="text-strong">Service type</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select</option>
-                            <option value="cleaning">Cleaning</option>
-                            <option value="repairs">Repairs</option>
-                            <option value="whitening">Whitening</option>
-                            <option value="polishing">Polishing</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="prev button">Previous</button>
-                <button class="next button">Next</button>
-            </div>
-            <!-- step 4 -->
-            <div id="step4" class="step">
-                <div id="thanks_note" class="my-2">
-                    <h2>
-                        Thank you! We’ve received your details.
+            <form id="submit-form" action="">
+                <!-- step 1 -->
+                <div id="step1" class="step active">
+                    <h2 class="my-2">
+                        Let’s get started! Just a few quick details, and we’ll take care of the rest.
                     </h2>
-                    <h2>
-                        We'll get in touch with you soon on WhatsApp with the next steps!
-                    </h2>
+                    <button class="next button">Get Started</button>
                 </div>
-                <button class="prev button">Previous</button>
-                <button id="submit" class="button">Submit</button>
-            </div>
+                <!-- step 2 -->
+                <div id="step2" class="step">
+                    <h2>Tell us a bit about you</h2>
+                    <div class="field padding-bottom--24 my-2 text-start">
+                        <div class="my-1 col-m-2">
+                            <label for="name" class="text-strong">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Name" />
+                        </div>
+                        <div class="my-1 col-m-2">
+                            <label for="city" class="text-strong">Where are you located?</label>
+                            <select id="city" name="city" required>
+                                <option value="">Select</option>
+                                <option value="Madiwala">Madiwala</option>
+                                <option value="Koramangala">Koramangala</option>
+                                <option value="IG Nagar">IG Nagar</option>
+                            </select>
+                        </div>
+                        <div class="my-1 col-m-2">
+                            <label for="mobile" class="text-strong">Your Mobile</label>
+                            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter.." />
+                        </div>
+                        <div class="my-1 col-m-2">
+                            <label for="email" class="text-strong">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="We’ll send updates here" />
+                        </div>
+                    </div>
+                    <button class="prev button">Previous</button>
+                    <button class="next button">Next</button>
+                </div>
+                <!-- step 3 -->
+                <div id="step3" class="step">
+                    <h2>What kind of service do you need?</h2>
+                    <div class="field padding-bottom--24 my-2 text-start">
+                        <div class="my-1 col-m-2">
+                            <label for="shoe-type" class="text-strong">Type of shoes</label>
+                            <select id="shoe-type" name="shoe-type" required>
+                                <option value="">Select</option>
+                                <option value="casual-sneakers">Casual Sneakers</option>
+                                <option value="formal-shoe">Formal Shoes</option>
+                                <option value="sports-shoe">Sports Shoes</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <div class="my-1 col-m-2">
+                            <label for="service" class="text-strong">Service type</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="repairs">Repairs</option>
+                                <option value="whitening">Whitening</option>
+                                <option value="polishing">Polishing</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="prev button">Previous</button>
+                    <button class="next button">Next</button>
+                </div>
+                <!-- step 4 -->
+                <div id="step4" class="step">
+                    <div id="thanks_note" class="my-2">
+                        <h2>
+                            Thank you! We’ve received your details.
+                        </h2>
+                        <h2>
+                            We'll get in touch with you soon on WhatsApp with the next steps!
+                        </h2>
+                    </div>
+                    <button id="submit" class="button">Submit</button>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
         </div>
     </div>
     
@@ -1005,6 +1009,40 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <script>
+        // Hide the submit input button
+        $("input[type='submit']").hide();
+
+        // Trigger form submission when clicking the button with id "submit"
+        $("#submit").click(function (e) {
+            e.preventDefault(); // Prevent default button behavior
+            $("#submit-form").submit(); // Trigger the form's submit event
+        });
+
+        $("#submit-form").submit((e) => {
+            e.preventDefault(); // Prevent the form from submitting initially
+
+            // Validation logic
+            let isValid = true;
+            // Submit if all fields are valid
+            if (isValid) {
+                console.log($("#submit-form").serialize());
+                
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbwgsUOZlevq5gfZQW9ga1CD5Sl6Igjqs_tpVwLEzEra9vfH60KscEfmrYoKERZvoybtaQ/exec",
+                    data: $("#submit-form").serialize(),
+                    method: "post",
+                    success: function (response) {
+                        window.location.reload();
+                        // window.location.href = "https://google.com";
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
