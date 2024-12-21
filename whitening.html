@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Fresh Feets offers premium shoe laundry services including cleaning, polishing, repairs, and whitening. Restore your shoes to their former glory with us!" />
+    <meta name="description"
+        content="Fresh Feets offers premium shoe laundry services including cleaning, polishing, repairs, and whitening. Restore your shoes to their former glory with us!" />
     <meta name="keywords" content="shoe laundry, shoe cleaning, shoe repair, sneaker cleaning, Fresh Feets" />
     <meta name="author" content="Fresh Feets" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Fresh Feets - Premium Shoe Laundry Services" />
-    <meta property="og:description" content="Fresh Feets offers professional cleaning, polishing, and repair services for your shoes. Book now!" />
+    <meta property="og:description"
+        content="Fresh Feets offers professional cleaning, polishing, and repair services for your shoes. Book now!" />
     <meta property="og:image" content="assets/images/og-image.jpg" />
     <meta property="og:url" content="https://www.fresh-feets.com" />
     <meta property="og:type" content="website" />
-    
-    <!-- Video preload -->
-    <link rel="preload" as="video" href="https://fresh-feets.s3.us-east-1.amazonaws.com/IMG_2449-2+(1)+(1).mp4" type="video/mp4">
 
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
@@ -80,12 +79,17 @@
                             <option value="">Select</option>
                             <option value="Madiwala">Madiwala</option>
                             <option value="Koramangala">Koramangala</option>
-                            <option value="IG Nagar">IG Nagar</option>
+                            <option value="BTM">BTM</option>
+                            <option value="SG Palya">SG Palya</option>
+                            <option value="Maruti Nagar">Maruti Nagar</option>
+                            <option value="Taverekere">Taverekere</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
                     <div class="my-1 col-m-2">
                         <label for="mobile" class="text-strong">Your Mobile</label>
-                        <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter.." />
+                        <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}"
+                            placeholder="Enter.." />
                     </div>
                     <div class="my-1 col-m-2">
                         <label for="email" class="text-strong">Email Address</label>
@@ -176,8 +180,7 @@
         <section class="service-details section container">
             <!-- Whitening Service -->
             <div class="service" data-service-name="Whitening">
-                <img src="assets/img/whitening-service.jpg"
-                    alt="Whitening Service" class="service__image" />
+                <img src="assets/img/whitening-service.jpg" alt="Whitening Service" class="service__image" />
 
                 <h2 class="section__title">Whitening</h2>
                 <p class="service__desc">
@@ -187,18 +190,23 @@
                 <div class="service__pricing">
                     <div class="pricing-card pricing-card--normal" onclick="selectCard(this)">
                         <h4 class="pricing-card__type">Normal</h4>
-                        <p class="pricing-card__price">₹150</p>
-                        <p class="pricing-card__desc">Surface polish for casual wear.</p>
+                        <p class="pricing-card__price">₹199</p>
+                        <p class="pricing-card__desc">Quick surface cleaning.</p>
                     </div>
                     <div class="pricing-card pricing-card--recommended" onclick="selectCard(this)">
                         <h4 class="pricing-card__type">Recommended</h4>
-                        <p class="pricing-card__price">₹300</p>
-                        <p class="pricing-card__desc">Detailed polishing for special occasions.</p>
+                        <p class="pricing-card__price">₹299</p>
+                        <p class="pricing-card__desc">Deep polish for events.</p>
                     </div>
                     <div class="pricing-card pricing-card--premium" onclick="selectCard(this)">
                         <h4 class="pricing-card__type">Premium</h4>
-                        <p class="pricing-card__price">₹500</p>
-                        <p class="pricing-card__desc">Professional-grade polish with extra shine.</p>
+                        <p class="pricing-card__price">₹399</p>
+                        <p class="pricing-card__desc">Professional shine treatment.</p>
+                    </div>
+                    <div class="pricing-card pricing-card--normal" onclick="selectCard(this)">
+                        <h4 class="pricing-card__type">Sandals</h4>
+                        <p class="pricing-card__price">₹199</p>
+                        <p class="pricing-card__desc">Basic cleaning/whitening for sandals.</p>
                     </div>
                 </div>
             </div>
@@ -340,9 +348,7 @@
             <div class="services__container grid">
                 <div class="services__data">
                     <h3 class="services__subtitle">Cleaning</h3>
-                    <img class="services__img"
-                        src="assets/img/cleaning.jpg"
-                        alt="Cleaning Shoes" />
+                    <img class="services__img" src="assets/img/cleaning.jpg" alt="Cleaning Shoes" />
                     <p class="services__description">
                         Revive your shoes with eco-friendly cleaning. Perfect for leather,
                         suede, and fabric shoes. Not recommended for heavily damaged
@@ -393,7 +399,7 @@
                         <span class="contact__information">Freshfeetsblr@gmail.com</span>
                     </li>
                     <li class="contact__address">
-                        Location: <span class="contact__information">IG Nagar - Bangalore</span>
+                        Location: <span class="contact__information">2nd Cross Rd Mico Layout, Garvebhavi Palya, Bengaluru, Karnataka 560068</span>
                     </li>
                 </ul>
 
@@ -416,7 +422,7 @@
                     <li><a href="/polishing" class="footer__link">Polishing</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer__content">
                 <h3 class="footer__title">Our Company</h3>
                 <ul class="footer__links">
@@ -427,7 +433,8 @@
             </div>
 
             <div class="footer__social">
-                <a href="https://www.instagram.com/freshfeets_india/" class="footer__social-link"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.instagram.com/freshfeets_india/" class="footer__social-link"><i
+                        class="bx bxl-instagram-alt"></i></a>
             </div>
         </div>
 

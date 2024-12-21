@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Fresh Feets offers premium shoe laundry services including cleaning, polishing, repairs, and whitening. Restore your shoes to their former glory with us!" />
+    <meta name="description"
+        content="Fresh Feets offers premium shoe laundry services including cleaning, polishing, repairs, and whitening. Restore your shoes to their former glory with us!" />
     <meta name="keywords" content="shoe laundry, shoe cleaning, shoe repair, sneaker cleaning, Fresh Feets" />
     <meta name="author" content="Fresh Feets" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Fresh Feets - Premium Shoe Laundry Services" />
-    <meta property="og:description" content="Fresh Feets offers professional cleaning, polishing, and repair services for your shoes. Book now!" />
+    <meta property="og:description"
+        content="Fresh Feets offers professional cleaning, polishing, and repair services for your shoes. Book now!" />
     <meta property="og:image" content="assets/images/og-image.jpg" />
     <meta property="og:url" content="https://www.fresh-feets.com" />
     <meta property="og:type" content="website" />
-    
+
     <!-- Video preload -->
-    <link rel="preload" as="video" href="https://fresh-feets.s3.us-east-1.amazonaws.com/IMG_2449-2+(1)+(1).mp4" type="video/mp4">
+    <link rel="preload" as="video" href="https://fresh-feets.s3.us-east-1.amazonaws.com/IMG_2449-2+(1)+(1).mp4"
+        type="video/mp4">
 
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
@@ -83,16 +86,22 @@
                                 <option value="">Select</option>
                                 <option value="Madiwala">Madiwala</option>
                                 <option value="Koramangala">Koramangala</option>
-                                <option value="IG Nagar">IG Nagar</option>
+                                <option value="BTM">BTM</option>
+                                <option value="SG Palya">SG Palya</option>
+                                <option value="Maruti Nagar">Maruti Nagar</option>
+                                <option value="Taverekere">Taverekere</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
                         <div class="my-1 col-m-2">
                             <label for="mobile" class="text-strong">Your Mobile</label>
-                            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter.." />
+                            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}"
+                                placeholder="Enter.." />
                         </div>
                         <div class="my-1 col-m-2">
                             <label for="email" class="text-strong">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="We’ll send updates here" />
+                            <input type="email" id="email" name="email" required
+                                placeholder="We’ll send updates here" />
                         </div>
                     </div>
                     <button class="prev button">Previous</button>
@@ -143,7 +152,7 @@
             </form>
         </div>
     </div>
-    
+
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container" id="nav" aria-label="Primary Navigation">
@@ -180,51 +189,40 @@
         <!--=============== HOME ===============-->
         <section id="home" class="home-section">
             <div class="video-container">
-              <div class="video-overlay">
-                <img
-                src="assets/img/video_thumbnail.jpeg"
-                alt="Fresh Feets video thumbnail showcasing shoe cleaning"
-                class="video-thumbnail"
-                loading="lazy"
-            />
-                <button class="play-button" aria-label="Play Video">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7L8 5z" />
-                  </svg>
-                </button>
-              </div>
-              <video
-              class="video-element"
-              playsinline
-              preload="metadata"
-              title="Fresh Feets Shoe Care Video"
-          >
-              <source src="https://fresh-feets.s3.us-east-1.amazonaws.com/IMG_2449-2+(1)+(1).mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-          </video>
-              <div class="logo-container">
-                <img
-                    src="assets/img/logo.png"
-                    alt="Fresh Feets - Shoe Laundry Service Logo"
-                    class="logo"
-                    loading="lazy"
-                />
+                <div class="video-overlay">
+                    <img src="assets/img/video_thumbnail.jpeg"
+                        alt="Fresh Feets video thumbnail showcasing shoe cleaning" class="video-thumbnail"
+                        loading="lazy" />
+                    <button class="play-button" aria-label="Play Video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7L8 5z" />
+                        </svg>
+                    </button>
+                </div>
+                <video class="video-element"  muted autoplay loop playsinline loading="lazy" title="Fresh Feets Shoe Care Video">
+                    <source src="assets/vid/intro-vid.mp4"
+                        type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="Fresh Feets - Shoe Laundry Service Logo" class="logo"
+                        loading="lazy" />
+                </div>
+                <div class="video-controls">
+                    <button class="control-button pause-button" aria-label="Pause Video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                        </svg>
+                    </button>
+                    <button class="control-button mute-button" aria-label="Mute Video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 9v6h4l5 5V4l-5 5H7z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-              <div class="video-controls">
-                <button class="control-button pause-button" aria-label="Pause Video">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                  </svg>
-                </button>
-                <button class="control-button mute-button" aria-label="Mute Video">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 9v6h4l5 5V4l-5 5H7z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </section>
-          
+        </section>
+
         <!--=============== HOME ===============-->
         <section class="home section">
             <div class="home__container container grid">
@@ -290,9 +288,7 @@
             <div class="services__container grid">
                 <div class="services__data">
                     <h3 class="services__subtitle">Cleaning</h3>
-                    <img class="services__img"
-                        src="assets/img/cleaning.jpg"
-                        alt="Cleaning Shoes" />
+                    <img class="services__img" src="assets/img/cleaning.jpg" alt="Cleaning Shoes" />
                     <p class="services__description">
                         Revive your shoes with eco-friendly cleaning. Perfect for leather,
                         suede, and fabric shoes. Not recommended for heavily damaged items.
@@ -304,9 +300,7 @@
 
                 <div class="services__data">
                     <h3 class="services__subtitle">Whitening</h3>
-                    <img class="services__img"
-                        src="assets/img/whitening.jpg"
-                        alt="Whitening Shoes" />
+                    <img class="services__img" src="assets/img/whitening.jpg" alt="Whitening Shoes" />
                     <p class="services__description">
                         Restore the bright white look of your sneakers. Not suitable for fabric-only materials.
                     </p>
@@ -961,7 +955,7 @@
                         <span class="contact__information">Freshfeetsblr@gmail.com</span>
                     </li>
                     <li class="contact__address">
-                        Location: <span class="contact__information">IG Nagar - Bangalore</span>
+                        Location: <span class="contact__information">2nd Cross Rd Mico Layout, Garvebhavi Palya, Bengaluru, Karnataka 560068</span>
                     </li>
                 </ul>
 
@@ -984,7 +978,7 @@
                     <li><a href="/polishing" class="footer__link">Polishing</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer__content">
                 <h3 class="footer__title">Our Company</h3>
                 <ul class="footer__links">
@@ -995,7 +989,8 @@
             </div>
 
             <div class="footer__social">
-                <a href="https://www.instagram.com/freshfeets_india/" class="footer__social-link"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.instagram.com/freshfeets_india/" class="footer__social-link"><i
+                        class="bx bxl-instagram-alt"></i></a>
             </div>
         </div>
 
@@ -1027,7 +1022,7 @@
             // Submit if all fields are valid
             if (isValid) {
                 console.log($("#submit-form").serialize());
-                
+
                 $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbwgsUOZlevq5gfZQW9ga1CD5Sl6Igjqs_tpVwLEzEra9vfH60KscEfmrYoKERZvoybtaQ/exec",
                     data: $("#submit-form").serialize(),
