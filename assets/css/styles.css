@@ -9,20 +9,20 @@
   --translate-x-end: calc(50vw - 7rem);
   --translate-y-end: calc(-50% + 1rem);
   --logo-scale: 2.2;
-  /*========== Colors ==========*/
-  --hue: 210; 
-  --sat: 60%;
-  --first-color: hsl(var(--hue), var(--sat), 60%);
-  --first-color-light: hsl(var(--hue), var(--sat), 85%);
-  --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
-  --first-color-alt: hsl(var(--hue), var(--sat), 53%);
-  --title-color: hsl(var(--hue), 4%, 15%);
-  --text-color: hsl(var(--hue), 4%, 35%);
-  --text-color-light: hsl(var(--hue), 4%, 65%);
-  --body-color: hsl(var(--hue), 0%, 100%);
-  --container-color: #FFF;
-  --scroll-bar-color: hsl(var(--hue), 4%, 85%);
-  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+/*========== Colors ==========*/
+--hue: 90; /* Adjusted for green tones */
+--sat: 45%; /* Balanced for softer saturation */
+--first-color: hsl(var(--hue), var(--sat), 40%); /* Logo green */
+--first-color-light: hsl(var(--hue), var(--sat), 70%); /* Lighter shade */
+--first-color-lighten: hsl(var(--hue), var(--sat), 60%); /* Light variant */
+--first-color-alt: hsl(var(--hue), var(--sat), 35%); /* Darker variant */
+--title-color: hsl(var(--hue), 10%, 15%); /* Dark title color */
+--text-color: hsl(var(--hue), 10%, 35%); /* Text */
+--text-color-light: hsl(var(--hue), 10%, 65%); /* Lighter text */
+--body-color: hsl(var(--hue), 0%, 98%); /* Background */
+--container-color: #F7F7F7; /* Light beige container */
+--scroll-bar-color: hsl(var(--hue), 10%, 85%); /* Scrollbar */
+--scroll-thumb-color: hsl(var(--hue), 10%, 75%); /* Thumb */
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 2rem;
@@ -492,9 +492,6 @@ body.dark-theme {
   }
   .section {
     padding: 3.5rem 0 1rem;
-  }
-  .services__img {
-    width: 100px;
   }
   .app__buttons {
     grid-template-columns: max-content;
@@ -1098,6 +1095,9 @@ input.invalid:focus, select.invalid:focus {
   height: auto;
   transition: all 0.5s ease-in-out;
 }
+.nav-logo{
+  height:70px
+}
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
@@ -1112,6 +1112,10 @@ input.invalid:focus, select.invalid:focus {
   .control-button svg {
     width: 24px;
     height: 24px;
+  }
+
+  .nav-logo{
+    height: 40px;
   }
 
   .logo {
